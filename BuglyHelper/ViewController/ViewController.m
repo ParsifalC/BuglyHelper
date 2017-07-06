@@ -31,6 +31,8 @@
                            completionBlock:^(id responseObj, NSError *error) {
                                if (!error) {
                                    NSLog(@"%@", responseObj);
+                               } else {
+                                   NSLog(@"%@", error);
                                }
                            }];
 }

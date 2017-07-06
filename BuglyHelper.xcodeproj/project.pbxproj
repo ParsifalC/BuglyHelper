@@ -10,11 +10,11 @@
 		467F29CAEB08CF627D5F1D0E /* libPods-BuglyHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */; };
 		9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C4991F0CC8E50052C393 /* AppDelegate.m */; };
 		9042C49D1F0CC8E50052C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49C1F0CC8E50052C393 /* main.m */; };
-		9042C4A01F0CC8E50052C393 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49F1F0CC8E50052C393 /* ViewController.m */; };
 		9042C4A21F0CC8E50052C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A11F0CC8E50052C393 /* Assets.xcassets */; };
 		9042C4A51F0CC8E50052C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A31F0CC8E50052C393 /* Main.storyboard */; };
-		9042C5161F0E0C9B0052C393 /* CPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C5151F0E0C9B0052C393 /* CPNetworkService.m */; };
-		9042C5191F0E11830052C393 /* CPDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C5181F0E11830052C393 /* CPDateHelper.m */; };
+		90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F21F0E2892006288E1 /* CPDateHelper.m */; };
+		90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F61F0E2892006288E1 /* CPNetworkService.m */; };
+		90C640FD1F0E2892006288E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FA1F0E2892006288E1 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,15 +24,15 @@
 		9042C4981F0CC8E50052C393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9042C4991F0CC8E50052C393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9042C49C1F0CC8E50052C393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9042C49E1F0CC8E50052C393 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9042C49F1F0CC8E50052C393 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9042C4A11F0CC8E50052C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9042C4A41F0CC8E50052C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9042C4A61F0CC8E50052C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9042C5141F0E0C9B0052C393 /* CPNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPNetworkService.h; sourceTree = "<group>"; };
-		9042C5151F0E0C9B0052C393 /* CPNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPNetworkService.m; sourceTree = "<group>"; };
-		9042C5171F0E11830052C393 /* CPDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDateHelper.h; sourceTree = "<group>"; };
-		9042C5181F0E11830052C393 /* CPDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDateHelper.m; sourceTree = "<group>"; };
+		90C640F11F0E2892006288E1 /* CPDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDateHelper.h; sourceTree = "<group>"; };
+		90C640F21F0E2892006288E1 /* CPDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDateHelper.m; sourceTree = "<group>"; };
+		90C640F51F0E2892006288E1 /* CPNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPNetworkService.h; sourceTree = "<group>"; };
+		90C640F61F0E2892006288E1 /* CPNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPNetworkService.m; sourceTree = "<group>"; };
+		90C640F91F0E2892006288E1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		90C640FA1F0E2892006288E1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,14 +86,13 @@
 		9042C4971F0CC8E50052C393 /* BuglyHelper */ = {
 			isa = PBXGroup;
 			children = (
+				90C640F01F0E2892006288E1 /* Helper */,
+				90C640F31F0E2892006288E1 /* Model */,
+				90C640F41F0E2892006288E1 /* Service */,
+				90C640F71F0E2892006288E1 /* View */,
+				90C640F81F0E2892006288E1 /* ViewController */,
 				9042C4981F0CC8E50052C393 /* AppDelegate.h */,
 				9042C4991F0CC8E50052C393 /* AppDelegate.m */,
-				9042C49E1F0CC8E50052C393 /* ViewController.h */,
-				9042C49F1F0CC8E50052C393 /* ViewController.m */,
-				9042C5141F0E0C9B0052C393 /* CPNetworkService.h */,
-				9042C5151F0E0C9B0052C393 /* CPNetworkService.m */,
-				9042C5171F0E11830052C393 /* CPDateHelper.h */,
-				9042C5181F0E11830052C393 /* CPDateHelper.m */,
 				9042C4A11F0CC8E50052C393 /* Assets.xcassets */,
 				9042C4A31F0CC8E50052C393 /* Main.storyboard */,
 				9042C4A61F0CC8E50052C393 /* Info.plist */,
@@ -108,6 +107,47 @@
 				9042C49C1F0CC8E50052C393 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90C640F01F0E2892006288E1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				90C640F11F0E2892006288E1 /* CPDateHelper.h */,
+				90C640F21F0E2892006288E1 /* CPDateHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		90C640F31F0E2892006288E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		90C640F41F0E2892006288E1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				90C640F51F0E2892006288E1 /* CPNetworkService.h */,
+				90C640F61F0E2892006288E1 /* CPNetworkService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		90C640F71F0E2892006288E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90C640F81F0E2892006288E1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90C640F91F0E2892006288E1 /* ViewController.h */,
+				90C640FA1F0E2892006288E1 /* ViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,11 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9042C4A01F0CC8E50052C393 /* ViewController.m in Sources */,
-				9042C5161F0E0C9B0052C393 /* CPNetworkService.m in Sources */,
+				90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */,
 				9042C49D1F0CC8E50052C393 /* main.m in Sources */,
 				9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */,
-				9042C5191F0E11830052C393 /* CPDateHelper.m in Sources */,
+				90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */,
+				90C640FD1F0E2892006288E1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
