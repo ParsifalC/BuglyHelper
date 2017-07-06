@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CPNetworkService.h"
+#import "CPDateHelper.h"
 
 @implementation ViewController
 
@@ -18,5 +20,19 @@
     [super setRepresentedObject:representedObject];
 }
 
+- (IBAction)btnTapped:(NSButton *)sender {
+    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
+                                                                count:8];
+    [CPNetworkService fetchCrashTrendSince:array.lastObject
+                                        to:array.firstObject
+                                appVersion:nil
+                                     appId:@""
+                                    appKey:@""
+                           completionBlock:^(id responseObj, NSError *error) {
+                               if (!error) {
+                                   NSLog(@"%@", responseObj);
+                               }
+                           }];
+}
 
 @end

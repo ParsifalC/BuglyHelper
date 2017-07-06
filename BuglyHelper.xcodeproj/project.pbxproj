@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		467F29CAEB08CF627D5F1D0E /* libPods-BuglyHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */; };
 		9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C4991F0CC8E50052C393 /* AppDelegate.m */; };
 		9042C49D1F0CC8E50052C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49C1F0CC8E50052C393 /* main.m */; };
 		9042C4A01F0CC8E50052C393 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49F1F0CC8E50052C393 /* ViewController.m */; };
 		9042C4A21F0CC8E50052C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A11F0CC8E50052C393 /* Assets.xcassets */; };
 		9042C4A51F0CC8E50052C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A31F0CC8E50052C393 /* Main.storyboard */; };
+		9042C5161F0E0C9B0052C393 /* CPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C5151F0E0C9B0052C393 /* CPNetworkService.m */; };
+		9042C5191F0E11830052C393 /* CPDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C5181F0E11830052C393 /* CPDateHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250FFE8252B80B042B282FD2 /* Pods-BuglyHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuglyHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9042C4951F0CC8E50052C393 /* BuglyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuglyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9042C4981F0CC8E50052C393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9042C4991F0CC8E50052C393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		9042C4A11F0CC8E50052C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9042C4A41F0CC8E50052C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9042C4A61F0CC8E50052C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9042C5141F0E0C9B0052C393 /* CPNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPNetworkService.h; sourceTree = "<group>"; };
+		9042C5151F0E0C9B0052C393 /* CPNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPNetworkService.m; sourceTree = "<group>"; };
+		9042C5171F0E11830052C393 /* CPDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDateHelper.h; sourceTree = "<group>"; };
+		9042C5181F0E11830052C393 /* CPDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDateHelper.m; sourceTree = "<group>"; };
+		E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467F29CAEB08CF627D5F1D0E /* libPods-BuglyHelper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F6BD344CF5699AD84645EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83CCA5A33398CC0297EA0B24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				250FFE8252B80B042B282FD2 /* Pods-BuglyHelper.debug.xcconfig */,
+				E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9042C48C1F0CC8E50052C393 = {
 			isa = PBXGroup;
 			children = (
 				9042C4971F0CC8E50052C393 /* BuglyHelper */,
 				9042C4961F0CC8E50052C393 /* Products */,
+				83CCA5A33398CC0297EA0B24 /* Pods */,
+				5F6BD344CF5699AD84645EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +90,10 @@
 				9042C4991F0CC8E50052C393 /* AppDelegate.m */,
 				9042C49E1F0CC8E50052C393 /* ViewController.h */,
 				9042C49F1F0CC8E50052C393 /* ViewController.m */,
+				9042C5141F0E0C9B0052C393 /* CPNetworkService.h */,
+				9042C5151F0E0C9B0052C393 /* CPNetworkService.m */,
+				9042C5171F0E11830052C393 /* CPDateHelper.h */,
+				9042C5181F0E11830052C393 /* CPDateHelper.m */,
 				9042C4A11F0CC8E50052C393 /* Assets.xcassets */,
 				9042C4A31F0CC8E50052C393 /* Main.storyboard */,
 				9042C4A61F0CC8E50052C393 /* Info.plist */,
@@ -83,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9042C4A91F0CC8E50052C393 /* Build configuration list for PBXNativeTarget "BuglyHelper" */;
 			buildPhases = (
+				C42A56A88030A9E88A3D60D7 /* [CP] Check Pods Manifest.lock */,
 				9042C4911F0CC8E50052C393 /* Sources */,
 				9042C4921F0CC8E50052C393 /* Frameworks */,
 				9042C4931F0CC8E50052C393 /* Resources */,
+				B8516968A1D534F661E64A2C /* [CP] Embed Pods Frameworks */,
+				0418F658DFFBD6ACFF5F40BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,14 +179,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0418F658DFFBD6ACFF5F40BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8516968A1D534F661E64A2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C42A56A88030A9E88A3D60D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9042C4911F0CC8E50052C393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9042C4A01F0CC8E50052C393 /* ViewController.m in Sources */,
+				9042C5161F0E0C9B0052C393 /* CPNetworkService.m in Sources */,
 				9042C49D1F0CC8E50052C393 /* main.m in Sources */,
 				9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */,
+				9042C5191F0E11830052C393 /* CPDateHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +345,7 @@
 		};
 		9042C4AA1F0CC8E50052C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250FFE8252B80B042B282FD2 /* Pods-BuglyHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -271,6 +359,7 @@
 		};
 		9042C4AB1F0CC8E50052C393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -301,6 +390,7 @@
 				9042C4AB1F0CC8E50052C393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
