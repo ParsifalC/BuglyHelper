@@ -10,7 +10,9 @@
 #import "CPNetworkService.h"
 #import "CPDateHelper.h"
 #import "CPCrashTrend+Util.h"
+#import "CPCrashInfo.h"
 #import "CPRealTimeTrend+Util.h"
+#import "NSString+Util.h"
 
 static NSString * const kCPAppID = @"";
 static NSString * const kCPAppKey = @"";
@@ -43,17 +45,17 @@ static NSString * const kCPAppKey = @"";
 }
 
 - (IBAction)fetchInfoBtnTapped:(NSButton *)sender {
-    [CPNetworkService fetchCrashInfoAtDate:@"20170705"
+    [CPNetworkService fetchCrashInfoAtDate:@"20170704"
                                      appId:kCPAppID
                                     appKey:kCPAppKey
                            completionBlock:^(CPRealTimeTrend *trend, NSError *error) {
                                if (!error) {
-                                   NSLog(@"%@", trend);
                                    NSLog(@"%@", trend.allAppVersion);
                                } else {
                                    NSLog(@"%@", error);
                                }
                            }];
 }
+
 
 @end

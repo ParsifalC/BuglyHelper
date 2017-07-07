@@ -11,5 +11,6 @@
 @interface NSString (Util)
 
 - (NSString *)plus:(NSString *)numStr;
++ (NSString *)pathForFile:(NSString *)fileName;
 
 @end
