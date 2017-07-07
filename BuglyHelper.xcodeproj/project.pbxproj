@@ -15,6 +15,8 @@
 		90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F21F0E2892006288E1 /* CPDateHelper.m */; };
 		90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F61F0E2892006288E1 /* CPNetworkService.m */; };
 		90C640FD1F0E2892006288E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FA1F0E2892006288E1 /* ViewController.m */; };
+		90C641001F0E2C4E006288E1 /* CPCrashInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FF1F0E2C4E006288E1 /* CPCrashInfo.m */; };
+		90C641031F0E2E10006288E1 /* CPCrashTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C641021F0E2E10006288E1 /* CPCrashTrend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		90C640F61F0E2892006288E1 /* CPNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPNetworkService.m; sourceTree = "<group>"; };
 		90C640F91F0E2892006288E1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		90C640FA1F0E2892006288E1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90C640FE1F0E2C4E006288E1 /* CPCrashInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCrashInfo.h; sourceTree = "<group>"; };
+		90C640FF1F0E2C4E006288E1 /* CPCrashInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCrashInfo.m; sourceTree = "<group>"; };
+		90C641011F0E2E10006288E1 /* CPCrashTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCrashTrend.h; sourceTree = "<group>"; };
+		90C641021F0E2E10006288E1 /* CPCrashTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCrashTrend.m; sourceTree = "<group>"; };
 		E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,10 @@
 		90C640F31F0E2892006288E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90C641011F0E2E10006288E1 /* CPCrashTrend.h */,
+				90C641021F0E2E10006288E1 /* CPCrashTrend.m */,
+				90C640FE1F0E2C4E006288E1 /* CPCrashInfo.h */,
+				90C640FF1F0E2C4E006288E1 /* CPCrashInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,9 +284,11 @@
 			files = (
 				90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */,
 				9042C49D1F0CC8E50052C393 /* main.m in Sources */,
+				90C641001F0E2C4E006288E1 /* CPCrashInfo.m in Sources */,
 				9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */,
 				90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */,
 				90C640FD1F0E2892006288E1 /* ViewController.m in Sources */,
+				90C641031F0E2E10006288E1 /* CPCrashTrend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "CPNetworkService.h"
 #import <AFNetworking/AFNetworking.h>
+#import "CPCrashTrend.h"
+#import "CPCrashInfo.h"
 
 static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
 
@@ -51,8 +53,9 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
     [[manager dataTaskWithRequest:request
                   uploadProgress:nil
                 downloadProgress:nil
-               completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                   !block?:block(responseObject, error);
+               completionHandler:^(NSURLResponse * _Nonnull response, NSDictionary *responseObject, NSError * _Nullable error) {
+                   CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPCrashTrend class] fromJSONDictionary:responseObject[@"data"] error:nil];
+                   !block?:block(trend, error);
                }] resume];
 }
 

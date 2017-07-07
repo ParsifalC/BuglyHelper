@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CPNetworkService.h"
 #import "CPDateHelper.h"
+#import "CPCrashTrend.h"
 
 @implementation ViewController
 
@@ -28,9 +29,9 @@
                                 appVersion:nil
                                      appId:@""
                                     appKey:@""
-                           completionBlock:^(id responseObj, NSError *error) {
+                           completionBlock:^(CPCrashTrend *trend, NSError *error) {
                                if (!error) {
-                                   NSLog(@"%@", responseObj);
+                                   NSLog(@"%@", trend);
                                } else {
                                    NSLog(@"%@", error);
                                }
