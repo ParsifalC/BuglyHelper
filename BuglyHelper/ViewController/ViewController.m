@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CPNetworkService.h"
 #import "CPDateHelper.h"
-#import "CPCrashTrend.h"
+#import "CPCrashTrend+Util.h"
 
 @implementation ViewController
 
@@ -27,11 +27,11 @@
     [CPNetworkService fetchCrashTrendSince:array.lastObject
                                         to:array.firstObject
                                 appVersion:nil
-                                     appId:@""
-                                    appKey:@""
+                                     appId:@"0"
+                                    appKey:@"0"
                            completionBlock:^(CPCrashTrend *trend, NSError *error) {
                                if (!error) {
-                                   NSLog(@"%@", trend);
+                                   NSLog(@"%@", trend.totalCrashInfo);
                                } else {
                                    NSLog(@"%@", error);
                                }

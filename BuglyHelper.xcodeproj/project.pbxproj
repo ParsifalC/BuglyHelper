@@ -17,6 +17,8 @@
 		90C640FD1F0E2892006288E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FA1F0E2892006288E1 /* ViewController.m */; };
 		90C641001F0E2C4E006288E1 /* CPCrashInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FF1F0E2C4E006288E1 /* CPCrashInfo.m */; };
 		90C641031F0E2E10006288E1 /* CPCrashTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C641021F0E2E10006288E1 /* CPCrashTrend.m */; };
+		90C641071F0F2F17006288E1 /* CPCrashTrend+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C641061F0F2F17006288E1 /* CPCrashTrend+Util.m */; };
+		90C6410A1F0F48F3006288E1 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C641091F0F48F3006288E1 /* NSString+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		90C640FF1F0E2C4E006288E1 /* CPCrashInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCrashInfo.m; sourceTree = "<group>"; };
 		90C641011F0E2E10006288E1 /* CPCrashTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCrashTrend.h; sourceTree = "<group>"; };
 		90C641021F0E2E10006288E1 /* CPCrashTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCrashTrend.m; sourceTree = "<group>"; };
+		90C641051F0F2F17006288E1 /* CPCrashTrend+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPCrashTrend+Util.h"; sourceTree = "<group>"; };
+		90C641061F0F2F17006288E1 /* CPCrashTrend+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPCrashTrend+Util.m"; sourceTree = "<group>"; };
+		90C641081F0F48F3006288E1 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		90C641091F0F48F3006288E1 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		E8D80EEFF0E810F53EA94F14 /* Pods-BuglyHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,7 @@
 		9042C4971F0CC8E50052C393 /* BuglyHelper */ = {
 			isa = PBXGroup;
 			children = (
+				90C641041F0F2EF5006288E1 /* Category */,
 				90C640F01F0E2892006288E1 /* Helper */,
 				90C640F31F0E2892006288E1 /* Model */,
 				90C640F41F0E2892006288E1 /* Service */,
@@ -158,6 +165,17 @@
 				90C640FA1F0E2892006288E1 /* ViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		90C641041F0F2EF5006288E1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				90C641051F0F2F17006288E1 /* CPCrashTrend+Util.h */,
+				90C641061F0F2F17006288E1 /* CPCrashTrend+Util.m */,
+				90C641081F0F48F3006288E1 /* NSString+Util.h */,
+				90C641091F0F48F3006288E1 /* NSString+Util.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C641071F0F2F17006288E1 /* CPCrashTrend+Util.m in Sources */,
 				90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */,
 				9042C49D1F0CC8E50052C393 /* main.m in Sources */,
 				90C641001F0E2C4E006288E1 /* CPCrashInfo.m in Sources */,
+				90C6410A1F0F48F3006288E1 /* NSString+Util.m in Sources */,
 				9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */,
 				90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */,
 				90C640FD1F0E2892006288E1 /* ViewController.m in Sources */,

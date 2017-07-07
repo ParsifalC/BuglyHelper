@@ -54,8 +54,9 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
                   uploadProgress:nil
                 downloadProgress:nil
                completionHandler:^(NSURLResponse * _Nonnull response, NSDictionary *responseObject, NSError * _Nullable error) {
-                   CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPCrashTrend class] fromJSONDictionary:responseObject[@"data"] error:nil];
-                   !block?:block(trend, error);
+                   NSError *mtlError;
+                   CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPCrashTrend class] fromJSONDictionary:responseObject[@"data"] error:&mtlError];
+                   !block?:block(trend, error?:mtlError);
                }] resume];
 }
 

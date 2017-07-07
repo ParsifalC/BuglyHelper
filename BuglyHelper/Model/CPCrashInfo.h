@@ -12,9 +12,9 @@
 
 @property (copy, nonatomic) NSString *accessNum;
 @property (copy, nonatomic) NSString *accessUser;
-@property (copy, nonatomic) NSString *appVersion;
 @property (copy, nonatomic) NSString *crashNum;
 @property (copy, nonatomic) NSString *crashUser;
+@property (copy, nonatomic) NSString *appVersion;
 @property (copy, nonatomic) NSString *date;
 
 @end
