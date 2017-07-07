@@ -686,24 +686,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tuf-wh-UFW">
-                                <rect key="frame" x="184" y="78" width="112" height="111"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xr4-3T-6m7">
+                                <rect key="frame" x="273" y="78" width="112" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1gF-KB-SdQ"/>
-                                    <constraint firstAttribute="height" constant="100" id="ruy-CL-IiS"/>
+                                    <constraint firstAttribute="height" constant="100" id="tGb-ZE-ba5"/>
+                                    <constraint firstAttribute="width" constant="100" id="zZd-CN-IHv"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9wm-oP-QUh">
+                                <buttonCell key="cell" type="push" title="获取日信息" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J9h-Sn-Ek3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="btnTapped:" target="XfG-lQ-9wD" id="wj1-J0-Noq"/>
+                                    <action selector="fetchInfoBtnTapped:" target="XfG-lQ-9wD" id="fkS-BI-XPp"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tuf-wh-UFW">
+                                <rect key="frame" x="95" y="78" width="112" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jro-P5-7i2"/>
+                                    <constraint firstAttribute="width" constant="100" id="adG-H2-rE1"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="获取周信息" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9wm-oP-QUh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="fetchTrendBtnTapped:" target="XfG-lQ-9wD" id="BF6-KM-X6g"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="tuf-wh-UFW" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="3jm-xn-T6z"/>
-                            <constraint firstItem="tuf-wh-UFW" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="S4P-xH-e5X"/>
+                            <constraint firstItem="tuf-wh-UFW" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="1Wt-pS-oPS"/>
+                            <constraint firstAttribute="trailing" secondItem="xr4-3T-6m7" secondAttribute="trailing" constant="101" id="cKn-77-nKx"/>
+                            <constraint firstItem="tuf-wh-UFW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="101" id="hqg-yY-vyS"/>
+                            <constraint firstItem="xr4-3T-6m7" firstAttribute="centerY" secondItem="tuf-wh-UFW" secondAttribute="centerY" id="kdm-Dx-Qfx"/>
                         </constraints>
                     </view>
                 </viewController>

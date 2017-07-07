@@ -19,4 +19,10 @@ typedef void(^CPTaskCompletionBlock)(id responseObj, NSError *error);
                       appKey:(NSString *)appKey
              completionBlock:(CPTaskCompletionBlock)block;
 
++ (void)fetchCrashInfoAtDate:(NSString *)date
+                       appId:(NSString *)appId
+                      appKey:(NSString *)appKey
+             completionBlock:(CPTaskCompletionBlock)block;
+
+
 @end

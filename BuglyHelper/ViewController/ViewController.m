@@ -11,6 +11,9 @@
 #import "CPDateHelper.h"
 #import "CPCrashTrend+Util.h"
 
+static NSString * const kCPAppID = @"";
+static NSString * const kCPAppKey = @"";
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -21,14 +24,14 @@
     [super setRepresentedObject:representedObject];
 }
 
-- (IBAction)btnTapped:(NSButton *)sender {
+- (IBAction)fetchTrendBtnTapped:(NSButton *)sender {
     NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
                                                                 count:8];
     [CPNetworkService fetchCrashTrendSince:array.lastObject
                                         to:array.firstObject
                                 appVersion:nil
-                                     appId:@"0"
-                                    appKey:@"0"
+                                     appId:kCPAppID
+                                    appKey:kCPAppKey
                            completionBlock:^(CPCrashTrend *trend, NSError *error) {
                                if (!error) {
                                    NSLog(@"%@", trend.totalCrashInfo);
@@ -37,5 +40,19 @@
                                }
                            }];
 }
+
+- (IBAction)fetchInfoBtnTapped:(NSButton *)sender {
+    [CPNetworkService fetchCrashInfoAtDate:@"20170705"
+                                     appId:kCPAppID
+                                    appKey:kCPAppKey
+                           completionBlock:^(CPCrashTrend *trend, NSError *error) {
+                               if (!error) {
+                                   NSLog(@"%@", trend);
+                               } else {
+                                   NSLog(@"%@", error);
+                               }
+                           }];
+}
+
 
 @end
