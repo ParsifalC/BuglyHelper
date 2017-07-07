@@ -14,10 +14,12 @@
     return @{
              @"accessNum": @"access_num",
              @"accessUser": @"access_user",
-             @"appVersion": @"app_version",
              @"crashNum": @"crash_num",
              @"crashUser": @"crash_user",
+             @"appVersion": @"app_version",
+             @"appVersion": @"productVersion",
              @"date": @"date",
+             @"date": @"dateTime",
              };
 }
 

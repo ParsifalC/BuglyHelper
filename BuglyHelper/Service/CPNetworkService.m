@@ -10,6 +10,8 @@
 #import <AFNetworking/AFNetworking.h>
 #import "CPCrashTrend.h"
 #import "CPCrashInfo.h"
+#import "CPRealTimeCrashInfo.h"
+#import "CPRealTimeTrend.h"
 
 static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
 
@@ -96,7 +98,7 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
                  downloadProgress:nil
                 completionHandler:^(NSURLResponse * _Nonnull response, NSDictionary *responseObject, NSError * _Nullable error) {
                     NSError *mtlError;
-                    CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPCrashTrend class] fromJSONDictionary:responseObject[@"data"] error:&mtlError];
+                    CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPRealTimeTrend class] fromJSONDictionary:responseObject[@"data"] error:&mtlError];
                     !block?:block(trend, error?:mtlError);
                 }] resume];
 }
