@@ -120,10 +120,14 @@ static NSString * const kCPServiceErrorDomain = @"com.BuglyHelper.error";
                         return ;
                     }
                     
-                    BOOL isSuccessful = [NSKeyedArchiver archiveRootObject:trend
-                                                                    toFile:path];
-                    NSError *archiveError = isSuccessful?nil:[NSError errorWithDomain:kCPServiceErrorDomain code:2000 userInfo:@{@"message":@"archiveRootObject error"}];
-                    !block?:block(trend, archiveError);
+                    if (trend.crashInfos.count) {
+                        BOOL isSuccessful = [NSKeyedArchiver archiveRootObject:trend
+                                                                        toFile:path];
+                        NSError *archiveError = isSuccessful?nil:[NSError errorWithDomain:kCPServiceErrorDomain code:2000 userInfo:@{@"message":@"archiveRootObject error"}];
+                        !block?:block(trend, archiveError);
+                    } else {
+                        !block?:block(trend, nil);
+                    }
                 }] resume];
 }
 
