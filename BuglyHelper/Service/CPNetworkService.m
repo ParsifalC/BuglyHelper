@@ -12,8 +12,10 @@
 #import "CPCrashInfo.h"
 #import "CPRealTimeCrashInfo.h"
 #import "CPRealTimeTrend.h"
+#import "NSString+Util.h"
 
 static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
+static NSString * const kCPServiceErrorDomain = @"com.BuglyHelper.error";
 
 @implementation CPNetworkService
 
@@ -24,7 +26,7 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
                       appKey:(NSString *)appKey
              completionBlock:(CPTaskCompletionBlock)block {
     if (!appId.length || !appKey.length || !startDate.length || !endDate.length) {
-        NSError *error = [NSError errorWithDomain:@"com.BuglyHelper.error" code:1000 userInfo:@{@"message":@"appId和appKey不能为空"}];
+        NSError *error = [NSError errorWithDomain:kCPServiceErrorDomain code:1000 userInfo:@{@"message":@"appId和appKey不能为空"}];
         !block?:block(nil, error);
         return;
     }
@@ -67,12 +69,21 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
                       appKey:(NSString *)appKey
              completionBlock:(CPTaskCompletionBlock)block {
     if (!appId.length || !appKey.length) {
-        NSError *error = [NSError errorWithDomain:@"com.BuglyHelper.error" code:1000 userInfo:@{@"message":@"appId和appKey不能为空"}];
+        NSError *error = [NSError errorWithDomain:kCPServiceErrorDomain code:1000 userInfo:@{@"message":@"appId和appKey不能为空"}];
         !block?:block(nil, error);
         return;
     }
     
     NSString *dateStr = [NSString stringWithFormat:@"%@23", date];
+    NSString *path = [NSString pathForFile:dateStr];
+    
+    //优先返回持久化数据
+    CPRealTimeTrend *trend = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    if (trend.crashInfos.count) {
+        !block?:block(trend, nil);
+        NSLog(@"命中缓存:%@", dateStr);
+        return;
+    }
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *bodyParameters = @{
@@ -97,9 +108,22 @@ static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
                    uploadProgress:nil
                  downloadProgress:nil
                 completionHandler:^(NSURLResponse * _Nonnull response, NSDictionary *responseObject, NSError * _Nullable error) {
+                    if (error) {
+                        !block?:block(trend, error);
+                        return ;
+                    }
+
                     NSError *mtlError;
-                    CPCrashTrend *trend = [MTLJSONAdapter modelOfClass:[CPRealTimeTrend class] fromJSONDictionary:responseObject[@"data"] error:&mtlError];
-                    !block?:block(trend, error?:mtlError);
+                    CPRealTimeTrend *trend = [MTLJSONAdapter modelOfClass:[CPRealTimeTrend class] fromJSONDictionary:responseObject[@"data"] error:&mtlError];
+                    if (mtlError) {
+                        !block?:block(trend, mtlError);
+                        return ;
+                    }
+                    
+                    BOOL isSuccessful = [NSKeyedArchiver archiveRootObject:trend
+                                                                    toFile:path];
+                    NSError *archiveError = isSuccessful?nil:[NSError errorWithDomain:kCPServiceErrorDomain code:2000 userInfo:@{@"message":@"archiveRootObject error"}];
+                    !block?:block(trend, archiveError);
                 }] resume];
 }
 

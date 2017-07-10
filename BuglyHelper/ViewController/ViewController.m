@@ -45,16 +45,21 @@ static NSString * const kCPAppKey = @"";
 }
 
 - (IBAction)fetchInfoBtnTapped:(NSButton *)sender {
-    [CPNetworkService fetchCrashInfoAtDate:@"20170704"
-                                     appId:kCPAppID
-                                    appKey:kCPAppKey
-                           completionBlock:^(CPRealTimeTrend *trend, NSError *error) {
-                               if (!error) {
-                                   NSLog(@"%@", trend.allAppVersion);
-                               } else {
-                                   NSLog(@"%@", error);
-                               }
-                           }];
+    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
+                                                                count:7];
+    for (NSString *dateStr in array) {
+        [CPNetworkService fetchCrashInfoAtDate:dateStr
+                                         appId:kCPAppID
+                                        appKey:kCPAppKey
+                               completionBlock:^(CPRealTimeTrend *trend, NSError *error) {
+                                   if (!error) {
+                                       NSLog(@"%@", trend.allAppVersion);
+                                   } else {
+                                       NSLog(@"%@", error);
+                                   }
+                               }];
+        sleep(0.5);
+    }
 }
 
 

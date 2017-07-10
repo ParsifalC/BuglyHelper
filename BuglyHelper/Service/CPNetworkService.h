@@ -24,5 +24,4 @@ typedef void(^CPTaskCompletionBlock)(id responseObj, NSError *error);
                       appKey:(NSString *)appKey
              completionBlock:(CPTaskCompletionBlock)block;
 
-
 @end
