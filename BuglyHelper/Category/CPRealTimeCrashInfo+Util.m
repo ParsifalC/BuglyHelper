@@ -21,4 +21,8 @@
     return info;
 }
 
+- (NSString *)excelDescription {
+    return [NSString stringWithFormat:@"%@,%@,%@,%@,%@", [self.appVersion stringByRemovingPercentEncoding], @(self.crashNum), @(self.crashUser), @(self.accessNum), @(self.accessUser)];
+}
+
 @end

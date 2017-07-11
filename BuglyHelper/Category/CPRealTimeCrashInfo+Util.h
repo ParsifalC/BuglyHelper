@@ -11,5 +11,6 @@
 @interface CPRealTimeCrashInfo (Util)
 
 - (instancetype)clone;
+- (NSString *)excelDescription;
 
 @end

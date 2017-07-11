@@ -34,9 +34,12 @@
 - (IBAction)calculateBtnTapped:(NSButton *)sender {
     [CPCrashAnalysisHelper analysisLocalCrashInfoThePastDays:7
                                              completionBlock:^(NSArray<CPRealTimeCrashInfo *> *infos) {
+                                                 NSString *allDes = @"";
                                                  for (CPRealTimeCrashInfo *info in infos) {
-                                                     NSLog(@"%@", info);
+                                                     allDes = [NSString stringWithFormat:@"%@\r\n%@", allDes, [info excelDescription]];
                                                  }
+                                                 
+                                                 NSLog(@"%@", allDes);
                                              }];
 }
 
