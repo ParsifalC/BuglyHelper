@@ -76,7 +76,7 @@ static NSString * const kCPServiceErrorDomain = @"com.BuglyHelper.error";
     }
     
     NSString *dateStr = [NSString stringWithFormat:@"%@23", date];
-    NSString *fileName = [NSString stringWithFormat:@"%@_%@", kCPAppName, dateStr];
+    NSString *fileName = [NSString stringWithFormat:@"%@", dateStr];
     NSString *path = [NSString pathForFile:fileName];
     
     //优先返回持久化数据

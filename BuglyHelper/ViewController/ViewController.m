@@ -44,7 +44,7 @@
 }
 
 - (IBAction)fetchTrendBtnTapped:(NSButton *)sender {
-    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
+    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate yesterday]
                                                                 count:4];
     [CPNetworkService fetchCrashTrendSince:array.lastObject
                                         to:array.firstObject

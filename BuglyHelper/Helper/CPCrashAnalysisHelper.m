@@ -23,7 +23,7 @@
                                                                         count:dayCount];
         NSMutableArray *mAllCrashInfos = @[].mutableCopy;
         for (NSString *dateStr in dateArray) {
-            NSString *fileName = [NSString stringWithFormat:@"%@_%@23", kCPAppName, dateStr];
+            NSString *fileName = [NSString stringWithFormat:@"%@23", dateStr];
             NSString *path = [NSString pathForFile:fileName];
             CPRealTimeTrend *trend = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
             [mAllCrashInfos addObjectsFromArray:trend.crashInfos];
