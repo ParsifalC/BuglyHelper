@@ -10,6 +10,7 @@
 		467F29CAEB08CF627D5F1D0E /* libPods-BuglyHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */; };
 		901826551F13701F002DF298 /* CPRealTimeCrashInfo+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 901826541F13701F002DF298 /* CPRealTimeCrashInfo+Util.m */; };
 		901826581F146F79002DF298 /* NSDate+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 901826571F146F79002DF298 /* NSDate+Util.m */; };
+		9018265C1F14789D002DF298 /* CPCrashAnalysisHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9018265B1F14789D002DF298 /* CPCrashAnalysisHelper.m */; };
 		9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C4991F0CC8E50052C393 /* AppDelegate.m */; };
 		9042C49D1F0CC8E50052C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49C1F0CC8E50052C393 /* main.m */; };
 		9042C4A21F0CC8E50052C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A11F0CC8E50052C393 /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 		901826561F146F79002DF298 /* NSDate+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Util.h"; sourceTree = "<group>"; };
 		901826571F146F79002DF298 /* NSDate+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Util.m"; sourceTree = "<group>"; };
 		901826591F1471B7002DF298 /* BuglyHelperMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuglyHelperMacro.h; sourceTree = "<group>"; };
+		9018265A1F14789D002DF298 /* CPCrashAnalysisHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCrashAnalysisHelper.h; sourceTree = "<group>"; };
+		9018265B1F14789D002DF298 /* CPCrashAnalysisHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCrashAnalysisHelper.m; sourceTree = "<group>"; };
 		9042C4951F0CC8E50052C393 /* BuglyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuglyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9042C4981F0CC8E50052C393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9042C4991F0CC8E50052C393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				90C640F11F0E2892006288E1 /* CPDateHelper.h */,
 				90C640F21F0E2892006288E1 /* CPDateHelper.m */,
+				9018265A1F14789D002DF298 /* CPCrashAnalysisHelper.h */,
+				9018265B1F14789D002DF298 /* CPCrashAnalysisHelper.m */,
 				901826591F1471B7002DF298 /* BuglyHelperMacro.h */,
 			);
 			path = Helper;
@@ -327,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9018265C1F14789D002DF298 /* CPCrashAnalysisHelper.m in Sources */,
 				90C641071F0F2F17006288E1 /* CPCrashTrend+Util.m in Sources */,
 				90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */,
 				90C641191F0F58E6006288E1 /* CPRealTimeTrend+Util.m in Sources */,
