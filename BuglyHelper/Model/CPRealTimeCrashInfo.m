@@ -14,6 +14,10 @@
     return @{
              @"appVersion": @"productVersion",
              @"date": @"dateTime",
+             @"accessNum": @"accessNum",
+             @"accessUser": @"accessUser",
+             @"crashNum": @"crashNum",
+             @"crashUser": @"crashUser",
              };
 }
 

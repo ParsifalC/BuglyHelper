@@ -683,11 +683,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="222"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xr4-3T-6m7">
-                                <rect key="frame" x="273" y="78" width="112" height="111"/>
+                                <rect key="frame" x="273" y="54" width="112" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="tGb-ZE-ba5"/>
                                     <constraint firstAttribute="width" constant="100" id="zZd-CN-IHv"/>
@@ -701,7 +701,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tuf-wh-UFW">
-                                <rect key="frame" x="95" y="78" width="112" height="111"/>
+                                <rect key="frame" x="95" y="54" width="112" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Jro-P5-7i2"/>
                                     <constraint firstAttribute="width" constant="100" id="adG-H2-rE1"/>
@@ -714,18 +714,34 @@
                                     <action selector="fetchTrendBtnTapped:" target="XfG-lQ-9wD" id="BF6-KM-X6g"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Z5-WO-lNN">
+                                <rect key="frame" x="95" y="164" width="290" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ai2-e0-ih6"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="计算前7天数据" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CrG-Um-HUh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="calculateBtnTapped:" target="XfG-lQ-9wD" id="2pJ-BK-Ayj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="tuf-wh-UFW" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="1Wt-pS-oPS"/>
+                            <constraint firstItem="tuf-wh-UFW" firstAttribute="top" secondItem="3Z5-WO-lNN" secondAttribute="bottom" constant="10" id="c0p-cc-rjS"/>
                             <constraint firstAttribute="trailing" secondItem="xr4-3T-6m7" secondAttribute="trailing" constant="101" id="cKn-77-nKx"/>
+                            <constraint firstItem="3Z5-WO-lNN" firstAttribute="trailing" secondItem="xr4-3T-6m7" secondAttribute="trailing" id="hnD-k6-Idu"/>
                             <constraint firstItem="tuf-wh-UFW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="101" id="hqg-yY-vyS"/>
                             <constraint firstItem="xr4-3T-6m7" firstAttribute="centerY" secondItem="tuf-wh-UFW" secondAttribute="centerY" id="kdm-Dx-Qfx"/>
+                            <constraint firstItem="3Z5-WO-lNN" firstAttribute="leading" secondItem="tuf-wh-UFW" secondAttribute="leading" id="vAe-py-b9Z"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="568.5"/>
         </scene>
     </scenes>
 </document>

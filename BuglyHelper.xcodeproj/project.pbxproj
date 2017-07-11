@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		467F29CAEB08CF627D5F1D0E /* libPods-BuglyHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */; };
+		901826551F13701F002DF298 /* CPRealTimeCrashInfo+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 901826541F13701F002DF298 /* CPRealTimeCrashInfo+Util.m */; };
 		9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C4991F0CC8E50052C393 /* AppDelegate.m */; };
 		9042C49D1F0CC8E50052C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49C1F0CC8E50052C393 /* main.m */; };
 		9042C4A21F0CC8E50052C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A11F0CC8E50052C393 /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		250FFE8252B80B042B282FD2 /* Pods-BuglyHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuglyHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuglyHelper/Pods-BuglyHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		644336CDE829C453CC9B52A1 /* libPods-BuglyHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuglyHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		901826531F13701F002DF298 /* CPRealTimeCrashInfo+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPRealTimeCrashInfo+Util.h"; sourceTree = "<group>"; };
+		901826541F13701F002DF298 /* CPRealTimeCrashInfo+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPRealTimeCrashInfo+Util.m"; sourceTree = "<group>"; };
 		9042C4951F0CC8E50052C393 /* BuglyHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuglyHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9042C4981F0CC8E50052C393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9042C4991F0CC8E50052C393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				90C641061F0F2F17006288E1 /* CPCrashTrend+Util.m */,
 				90C641171F0F58E6006288E1 /* CPRealTimeTrend+Util.h */,
 				90C641181F0F58E6006288E1 /* CPRealTimeTrend+Util.m */,
+				901826531F13701F002DF298 /* CPRealTimeCrashInfo+Util.h */,
+				901826541F13701F002DF298 /* CPRealTimeCrashInfo+Util.m */,
 				90C641081F0F48F3006288E1 /* NSString+Util.h */,
 				90C641091F0F48F3006288E1 /* NSString+Util.m */,
 			);
@@ -325,6 +330,7 @@
 				9042C49A1F0CC8E50052C393 /* AppDelegate.m in Sources */,
 				90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */,
 				90C640FD1F0E2892006288E1 /* ViewController.m in Sources */,
+				901826551F13701F002DF298 /* CPRealTimeCrashInfo+Util.m in Sources */,
 				90C641031F0E2E10006288E1 /* CPCrashTrend.m in Sources */,
 				90C6410D1F0F5617006288E1 /* CPRealTimeCrashInfo.m in Sources */,
 			);
