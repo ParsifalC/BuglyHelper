@@ -13,6 +13,7 @@
 #import "CPRealTimeCrashInfo.h"
 #import "CPRealTimeTrend.h"
 #import "NSString+Util.h"
+#import "BuglyHelperMacro.h"
 
 static NSString * const kCPBuglyBaseURLString = @"https://api.bugly.qq.com/";
 static NSString * const kCPServiceErrorDomain = @"com.BuglyHelper.error";
@@ -75,7 +76,8 @@ static NSString * const kCPServiceErrorDomain = @"com.BuglyHelper.error";
     }
     
     NSString *dateStr = [NSString stringWithFormat:@"%@23", date];
-    NSString *path = [NSString pathForFile:dateStr];
+    NSString *fileName = [NSString stringWithFormat:@"%@_%@", kCPAppName, dateStr];
+    NSString *path = [NSString pathForFile:fileName];
     
     //优先返回持久化数据
     CPRealTimeTrend *trend = [NSKeyedUnarchiver unarchiveObjectWithFile:path];

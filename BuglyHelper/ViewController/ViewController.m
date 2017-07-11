@@ -14,9 +14,8 @@
 #import "CPRealTimeTrend+Util.h"
 #import "CPRealTimeCrashInfo+Util.h"
 #import "NSString+Util.h"
-
-static NSString * const kCPAppID = @"";
-static NSString * const kCPAppKey = @"";
+#import "NSDate+Util.h"
+#import "BuglyHelperMacro.h"
 
 @implementation ViewController
 
@@ -25,12 +24,12 @@ static NSString * const kCPAppKey = @"";
 }
 
 - (void)calculateinfo {
-    NSArray *dateArray = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
+    NSArray *dateArray = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate yesterday]
                                                                 count:7];
     NSMutableArray *mAllCrashInfos = @[].mutableCopy;
     for (NSString *dateStr in dateArray) {
-        NSString *realTimeStr = [dateStr stringByAppendingString:@"23"];
-        NSString *path = [NSString pathForFile:realTimeStr];
+        NSString *fileName = [NSString stringWithFormat:@"%@_%@23", kCPAppName, dateStr];
+        NSString *path = [NSString pathForFile:fileName];
         CPRealTimeTrend *trend = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         [mAllCrashInfos addObjectsFromArray:trend.crashInfos];
     }
@@ -89,8 +88,8 @@ static NSString * const kCPAppKey = @"";
 }
 
 - (IBAction)fetchInfoBtnTapped:(NSButton *)sender {
-    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate date]
-                                                                count:7];
+    NSArray *array = [[CPDateHelper sharedHelper] dateStringBeforDate:[NSDate yesterday]
+                                                                count:3];
     for (NSString *dateStr in array) {
         [CPNetworkService fetchCrashInfoAtDate:dateStr
                                          appId:kCPAppID
