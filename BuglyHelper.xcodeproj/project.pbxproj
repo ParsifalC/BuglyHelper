@@ -15,6 +15,7 @@
 		9042C49D1F0CC8E50052C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9042C49C1F0CC8E50052C393 /* main.m */; };
 		9042C4A21F0CC8E50052C393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A11F0CC8E50052C393 /* Assets.xcassets */; };
 		9042C4A51F0CC8E50052C393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042C4A31F0CC8E50052C393 /* Main.storyboard */; };
+		90B188851F15F7130062D298 /* CPCrashInfo+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B188841F15F7130062D298 /* CPCrashInfo+Util.m */; };
 		90C640FB1F0E2892006288E1 /* CPDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F21F0E2892006288E1 /* CPDateHelper.m */; };
 		90C640FC1F0E2892006288E1 /* CPNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640F61F0E2892006288E1 /* CPNetworkService.m */; };
 		90C640FD1F0E2892006288E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C640FA1F0E2892006288E1 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 		9042C4A11F0CC8E50052C393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9042C4A41F0CC8E50052C393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9042C4A61F0CC8E50052C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90B188831F15F7130062D298 /* CPCrashInfo+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPCrashInfo+Util.h"; sourceTree = "<group>"; };
+		90B188841F15F7130062D298 /* CPCrashInfo+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPCrashInfo+Util.m"; sourceTree = "<group>"; };
 		90C640F11F0E2892006288E1 /* CPDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDateHelper.h; sourceTree = "<group>"; };
 		90C640F21F0E2892006288E1 /* CPDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDateHelper.m; sourceTree = "<group>"; };
 		90C640F51F0E2892006288E1 /* CPNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPNetworkService.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				90C641181F0F58E6006288E1 /* CPRealTimeTrend+Util.m */,
 				901826531F13701F002DF298 /* CPRealTimeCrashInfo+Util.h */,
 				901826541F13701F002DF298 /* CPRealTimeCrashInfo+Util.m */,
+				90B188831F15F7130062D298 /* CPCrashInfo+Util.h */,
+				90B188841F15F7130062D298 /* CPCrashInfo+Util.m */,
 				90C641081F0F48F3006288E1 /* NSString+Util.h */,
 				90C641091F0F48F3006288E1 /* NSString+Util.m */,
 				901826561F146F79002DF298 /* NSDate+Util.h */,
@@ -338,6 +343,7 @@
 				90C641191F0F58E6006288E1 /* CPRealTimeTrend+Util.m in Sources */,
 				9042C49D1F0CC8E50052C393 /* main.m in Sources */,
 				90C641131F0F57DA006288E1 /* CPRealTimeTrend.m in Sources */,
+				90B188851F15F7130062D298 /* CPCrashInfo+Util.m in Sources */,
 				90C641001F0E2C4E006288E1 /* CPCrashInfo.m in Sources */,
 				901826581F146F79002DF298 /* NSDate+Util.m in Sources */,
 				90C6410A1F0F48F3006288E1 /* NSString+Util.m in Sources */,
