@@ -11,5 +11,6 @@
 @interface NSDate (Util)
 
 + (NSDate *)yesterday;
++ (NSDate *)theDayBeforeDays:(NSUInteger)days;
 
 @end

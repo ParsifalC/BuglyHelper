@@ -15,4 +15,9 @@
     return [today dateByAddingTimeInterval:-86400];
 }
 
++ (NSDate *)theDayBeforeDays:(NSUInteger)days {
+    NSDate *today = [NSDate date];
+    return [today dateByAddingTimeInterval:-(86400*days)];
+}
+
 @end
